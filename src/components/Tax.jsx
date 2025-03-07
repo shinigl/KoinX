@@ -2,28 +2,22 @@ import React, { useState, useEffect } from 'react'
 import Dropdown from './Dropdown'
 
 export default function Tax() {
-    const [tick, setTick] = useState(false);
-    const [tickone, setTickone] = useState(true);
-    const [anincome, setAnincome] = useState(0);
-    const [tax, setTax] = useState("0%");
-    const [mytax, setMytax] = useState(0);
-    const [mynet, setMynet] = useState(0);
     const [purchase, setPurchase] = useState(0);
     const [sale, setSale] = useState(0);
     const [exp, setExp] = useState(0);
     const [capitalGain, setCapitalGain] = useState(0);
     const [longterm, setLongterm] = useState(0);
     const [paytax, setPaytax] = useState(0);
+    const [tick, setTick] = useState(false);
+    const [tickone, setTickone] = useState(true);
+    const [anincome, setAnincome] = useState(0);
+    const [tax, setTax] = useState("0%");
+    const [mytax, setMytax] = useState(0);
+    const [mynet, setMynet] = useState(0);
+  
 
   
-    function handletick() {
-        setTick(!tick);
-        setTickone(!tickone);
-    }
 
-    function incomechanges(data) {
-        setAnincome(data);
-    }
 
    
     useEffect(() => {
@@ -70,6 +64,15 @@ export default function Tax() {
         }
         calc()
     }, [sale, exp, purchase, mytax])
+
+    function handletick() {
+        setTick(!tick);
+        setTickone(!tickone);
+    }
+
+    function incomechanges(data) {
+        setAnincome(data);
+    }
 
     return (
         <div className='taxcard bg-white rounded-2xl p-5 flex flex-col justify-center items-center w-full max-w-4xl mx-auto'>
