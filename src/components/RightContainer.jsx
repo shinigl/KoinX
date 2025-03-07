@@ -1,4 +1,4 @@
-import promot from "../assets/promot.png"
+import logo from "../assets/logo.png"
 const RightContainer = () => {
     return (
       <div className="bg-blue-600 text-white p-6 rounded-lg shadow-lg max-w-sm w-full self-start">
@@ -6,7 +6,7 @@ const RightContainer = () => {
         <p className="text-sm text-center mb-4">
           With our range of features that you can equip for free, KoinX allows you to be more educated and aware of your tax reports.
         </p>
-        <img src={promot} style={{"width":"178.66px","height":"166.22px"}} alt="" />
+        <img src={logo} style={{"width":"178.66px","height":"166.22px"}} alt="" />
         <div className="flex justify-center">
           <button className="bg-white text-blue-600 font-bold py-2 px-4 rounded-lg shadow-md hover:bg-gray-100">
             Get Started for FREE →
